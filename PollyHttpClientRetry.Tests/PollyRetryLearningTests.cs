@@ -33,6 +33,8 @@ public class PollyHttpClientRetryTests
       );
 
     var httpClient = new HttpClient();
+
+    // this url doesn't exist, hence a HttpRequestException will be thrown
     var url = new Uri("http://timeout.alexanderzeitler.com");
     try
     {
